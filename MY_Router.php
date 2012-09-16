@@ -23,6 +23,7 @@ class MY_Router extends CI_Router {
 		if (isset($this->routes[$uri]))
 		{
 			log_message('debug', 'Route found : ' . $uri . '  --> ' . $this->routes[$uri]);
+			log_message('debug', 'Redirecting to : ' . $uri . '  --> ' . $uri);
 			return $this->_set_request(explode('/', $this->routes[$uri]));
 		}
 
